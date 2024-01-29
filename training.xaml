@@ -1,0 +1,43 @@
+﻿<Page x:Class="Words.training"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Words"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="900"
+      Title="training">
+
+    <Grid Background="#F4A460">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="#d9de87" BorderThickness="5">
+            <TextBox x:Name="UserInput" Text="" FontSize="15"/>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="2" BorderBrush="#d9de87" BorderThickness="5" >
+            <TextBlock x:Name="QuestionBox" Background="white" FontSize="15" Text="q" />
+        </Border>
+
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Button Content="Sprawdź" Background="#ce954b" Click="Check" />
+            <Button Content="Zmień" Background="#ce954b" Click="Change"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2">
+            <Button x:Name="plToEngButton" Background="#ce954b" Content="Pl  To Eng" Click="ChangeLanguage" />
+            <Button Content="Podpowiedź" Background="#ce954b" Click="Hint" />
+        </StackPanel>
+    </Grid>
+</Page>
